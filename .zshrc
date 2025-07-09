@@ -1,9 +1,6 @@
 
 #!/bin/zsh
 
-# load uv, ..
-source "$HOME/.local/bin/env"
-
 # login code artifact (lca)
 lca(){
     local token
@@ -27,3 +24,12 @@ lca(){
 
 # direnv config
 eval "$(direnv hook zsh)"
+
+# zsh customizations
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+
+# load uv, ...
+. "$HOME/.local/bin/env"
